@@ -1,0 +1,23 @@
+{
+  "name": "emojip",
+  "description": "emoji personnality",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "nanoid": "4.0.1",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "*"
+  },
+  "version": "1.0.0",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC"
+}
