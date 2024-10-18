@@ -1,9 +1,9 @@
 import React from "react"
-
+import gear from "../images/gear.svg"
 export default function ResultsModal(props) {
 	const message = !props.resultsReady ? (
 		<div className="modal-inner-container">
-			<img src="./images/gear.svg" /> <p>Calculating Results</p>{" "}
+			<img src= {gear} /> <p>Calculating Results</p>{" "}
 		</div>
 	) : (
 		<div className="modal-inner-container">
