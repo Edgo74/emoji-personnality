@@ -15,7 +15,7 @@ export default function App() {
 	const [personalityResult, setPersonalityResult] = React.useState("super !")
 
 	function handleClick(e) {
-		// console.log(e.target.textContent)
+
 		setLikedEmojis(prevEmojis => [...prevEmojis, e.target.textContent])
 		const selectedEmoji = e.target.textContent;
 		const arrayPassedEmojis = currentEmojis.filter((emoji) => emoji != selectedEmoji)
@@ -64,17 +64,17 @@ export default function App() {
 							messages: [
 								{
 									role: 'user',
-									content: `En te basant sur les emojis suivants aimés par un utilisateur : ${emojiString}, génére une description courte et personnalisée de sa personnalité. utilise un ton amical en tutoyant l'utilisateur. Ta réponse ne doit jamaias dépasser 70 mots` 
+									content: `En te basant sur les emojis suivants aimés par un utilisateur : ${emojiString}, génére une description courte et personnalisée de sa personnalité. utilise un ton amical en tutoyant l'utilisateur. Ta réponse ne doit jamaias dépasser 50 mots` 
 								}
 							],
-							max_tokens: 120,
+							max_tokens: 140,
 						}),
 					});
 	
 					const data = await response.json();
 					// Récupérer la réponse générée par GPT-4
 					console.log(data.choices[0]?.message.content);
-					const generatedText = data.choices[0]?.message.content || "Your personality is great!"; 
+					const generatedText = data.choices[0]?.message.content || "Tu as une super personnalité!"; 
 	
 					// Stocker le résultat
 					setResultsReady(true);
