@@ -6,17 +6,21 @@ export default function ResultsModal(props) {
 			<img src= {gear} /> <p>Analyse...</p>{" "}
 		</div>
 	) : (
+		<>
 		<div className="modal-inner-container">
 			<ul className="bounce-top">
 				{props.likedEmojis.map(props.generateListItems)}
 			</ul>
-			<p>
-				Your personality is: <span>great</span>!
-			</p>
 			<button className="try-again-button" onClick={props.reset}>
-				Try Again
+				Je réessaye !
 			</button>
 		</div>
+		<div className="modal-inner-container w-text">
+			<p>
+				Ta personnalité: <span> {props.personalityResult} </span>
+			</p>
+		</div>
+		</>
 	)
 
 	if (props.likedEmojis.length >= 10) {
@@ -37,3 +41,5 @@ export default function ResultsModal(props) {
 		return null
 	}
 }
+
+
