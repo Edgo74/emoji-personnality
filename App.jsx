@@ -66,7 +66,7 @@ export default function App() {
 				likedEmojis={likedEmojis}
 			/>
 
-			<h1>Emoji Personality Test</h1>
+			<h1>Test d'Emoji Personnalité </h1>
 
 			<div className="overall-emojis-container">
 				<button onClick={handleClick}>

@@ -3,7 +3,7 @@ import gear from "../images/gear.svg"
 export default function ResultsModal(props) {
 	const message = !props.resultsReady ? (
 		<div className="modal-inner-container">
-			<img src= {gear} /> <p>Calculating Results</p>{" "}
+			<img src= {gear} /> <p>Analyse...</p>{" "}
 		</div>
 	) : (
 		<div className="modal-inner-container">
@@ -25,7 +25,7 @@ export default function ResultsModal(props) {
 				{!props.showResults ? (
 					<div className="modal-inner-container">
 						<button className="get-results-button" onClick={props.getResults}>
-							Get Results
+							Obtenir le résultat
 						</button>
 					</div>
 				) : (
